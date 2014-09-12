@@ -71,15 +71,15 @@ def get_proper_synonyms(tag):
         return []
 
 #TODO: save this in cache
-synonyms_dict = {}
-proper_names_dict = {}
-l = TagSynonym.objects.values_list('tag_id', 'synonym_tag_id')
-for (t, s) in l:
-    proper_names_dict[s] = t
-    if t in synonyms_dict:
-        synonyms_dict[t].append(s)
-    else:
-        synonyms_dict[t] = [s]
+# synonyms_dict = {}
+# proper_names_dict = {}
+# l = TagSynonym.objects.values_list('tag_id', 'synonym_tag_id')
+# for (t, s) in l:
+#     proper_names_dict[s] = t
+#     if t in synonyms_dict:
+#         synonyms_dict[t].append(s)
+#     else:
+#         synonyms_dict[t] = [s]
 
 
 class TagResource(BaseResource):
